@@ -1,0 +1,50 @@
+<script>
+    class Cat{
+        constructor(name){
+            this.name = "Milou";
+            this.color = "black";
+            this.tiredness = "HIGH";
+            this.hunger = "HIGH";
+            this.loneliness = "HIGH";
+            this.hapiness ="LOW";
+        }
+        feed(){
+            this.hunger = "LOW"
+        }
+        sleep(){
+            this.tiredness = "LOW"
+        }
+        pet(){
+            this.loneliness = "LOW";
+            this.hapiness = "HIGH";
+        }
+        checkStatus(){
+            if(this.hunger == "LOW"){
+                console.log(this.name + " is really satisfied now");
+            }
+            else if(this.tiredness == "LOW"){
+                console.log(this.name + " is really relaxed now");
+            }
+            else if(this.hunger == "HIGH"){
+                console.log(this.name + " is really hungry now");
+            }
+            else if(this.tiredness == "HIGH"){
+                console.log(this.name + " is really tired now");
+            }
+            else if(this.loneliness == "LOW"){
+                console.log(this.name + " is really happy now");
+            }
+            else{
+                console.log("Nothing to show");
+            }
+        }
+    }
+    var myCat = new Cat(myCat);
+    console.log(myCat.feed());
+    console.log(myCat.checkStatus());
+    console.log(myCat.sleep());
+    console.log(myCat.checkStatus());
+    console.log(myCat.pet());
+    console.log(myCat.checkStatus());
+
+</script>

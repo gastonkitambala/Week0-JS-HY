@@ -1,0 +1,66 @@
+<script>
+    class Animal {
+	constructor(name, color){
+		this.name = name
+		this.legs = 4
+        this.color = color
+        this.tiredness = "LOW"
+        this.hunger = "LOW"
+	}
+	
+	getColor(){
+		console.log(this.name+' has a '+this.color+ ' color.')
+	}
+}
+
+class Dog extends Animal{
+	constructor(name, color){
+		//passing the name and color to super, which will call the parent constructor
+		super(name, color)
+	}
+	
+	bark(){ //a dog can bark, this maybe one of the special things about dogs
+	
+		console.log(this.name+' is barking...')
+	}
+}
+
+class Cat extends Animal{
+	constructor(name, color){
+		super(name, color)
+	}
+	
+	purr(){
+		console.log(this.name+ ' is purring.')
+	}
+}
+class flyingCat extends Cat{
+    constructor(name, color){
+        super(name,color)
+        this.flyingDistance = '500 meters';
+    }
+    fly(){
+        console.log(this.name + "Is flying at" + this.flyingDistance + "distance");
+        this.tiredness ="HIGH"
+        console.log(this.tiredness)
+        this.hunger = "HIGH"
+        console.log(this.hunger)
+    }
+
+}
+
+console.log('====================First Animal =====================')
+var milou = new Dog('Milou', 'white')
+milou.getColor()
+milou.bark()
+
+console.log('====================2nd Animal =====================')
+var dido = new Cat('Dido', 'orange')
+dido.getColor()
+dido.purr()
+console.log('====================Third Animal =====================')
+var mougly = new flyingCat('Milou', 'white')
+mougly.getColor()
+mougly.fly()
+
+</script>

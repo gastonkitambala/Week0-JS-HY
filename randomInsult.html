@@ -1,0 +1,11 @@
+<script>
+    var bodyPart = ["face", "foot", "nose", "hand", "head"];
+    var adjective = ["hairy and", "extremely", "insultingly", "astonishingly"];
+    var adjectiveTwo = ["stupid", "gigantic", "fat", "horrid", "scary"];
+    var animal = ["baboon", "sasquatch", "sloth", "naked cat", "warthog"];
+    function rand(thing){
+        return thing[Math.floor(Math.random() * thing.length)];
+    }
+  var insult = 'Your ' + rand(bodyPart) + ' is ' + rand(adjective)+" " + rand(adjectiveTwo) + " than a" + rand(animal) + '!';
+  console.log(insult);
+</script>
